@@ -1,0 +1,187 @@
+div.t {
+    width:500px;
+    padding: 30px;
+    text-align: center;
+    border:2px solid #000;
+    border-radius:15px;
+    background-color:#fff;
+    top: 50px;
+    margin-left:-250px;
+    margin-right:auto;
+    position:fixed;
+    z-index:2;
+    top:50px;
+    left:50%;
+}
+div.q {
+    width:500px;
+    padding: 30px;
+    text-align: center;
+    border:2px solid #000;
+    border-radius:15px;
+    background-color:#fff;
+    top: 50px;
+    margin-left:auto;
+    margin-right:auto;
+    position:fixed;
+    top:50px;
+    margin-left:-250px;
+    margin-right:auto;
+    left:50%;
+}
+body {
+    background-color:#aaa;
+    font-family:sans-serif;
+}
+.button {
+    padding:20px;
+    background-color:white;
+    border:2px solid black;
+    border-radius:10px;
+    font-weight:bold;
+}
+.rainbow {
+    color: black;
+    -webkit-animation: rbow 400ms infinite;
+    animation: rbow 400ms infinite;
+}
+@-webkit-keyframes rbow {
+    0% {
+        color: #f00;
+    }
+    16% {
+        color: #ff0;
+    }
+    32% {
+        color: #0f0;
+    }
+    48% {
+        color: #0ff;
+    }
+    64% {
+        color: #00f;
+    }
+    82% {
+        color: #f0f;
+    }
+    100% {
+        color: #f00;
+    }
+}
+@keyframes rbow {
+    0% {
+        color: #f00;
+    }
+    16% {
+        color: #ff0;
+    }
+    32% {
+        color: #0f0;
+    }
+    48% {
+        color: #0ff;
+    }
+    64% {
+        color: #00f;
+    }
+    82% {
+        color: #f0f;
+    }
+    100% {
+        color: #f00;
+    }
+}
+.fadechange {
+    background: black;
+    -webkit-animation: fading 400ms infinite;
+    animation: fading 400ms infinite;
+}
+@-webkit-keyframes fading {
+    0% {
+        background: #f77;
+    }
+    16% {
+        background: #ff7;
+    }
+    32% {
+        background: #7f7;
+    }
+    48% {
+        background: #7ff;
+    }
+    64% {
+        background: #77f;
+    }
+    82% {
+        background: #f7f;
+    }
+    100% {
+        background:#f77;
+    }
+}
+@keyframes fading {
+    0% {
+        background: #f77;
+    }
+    16% {
+        background: #ff7;
+    }
+    32% {
+        background: #7f7;
+    }
+    48% {
+        background: #7ff;
+    }
+    64% {
+        background: #77f;
+    }
+    82% {
+        background: #f7f;
+    }
+    100% {
+        background:#f77;
+    }
+}
+.one {
+    opacity: 0;
+    -webkit-animation: dot 1.3s infinite;
+    animation: dot 1.3s infinite;
+    -webkit-animation-delay: 0.0s;
+    animation-delay: 0.0s;
+}
+.two {
+    opacity: 0;
+    -webkit-animation: dot 1.3s infinite;
+    animation: dot 1.3s infinite;
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+.three {
+    opacity: 0;
+    -webkit-animation: dot 1.3s infinite;
+    animation: dot 1.3s infinite;
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+@-webkit-keyframes dot {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes dot {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
