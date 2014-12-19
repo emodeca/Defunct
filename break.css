@@ -30,6 +30,9 @@ div.q {
     left:50%;
 }
 body {
+  font-family: 'Tangerine', serif;
+  font-size: 48px;
+  text-shadow: 4px 4px 4px #aaa;
     background-color:#aaa;
 }
 .button {
