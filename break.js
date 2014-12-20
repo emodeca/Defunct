@@ -12,8 +12,8 @@ $(window).load(function() {
     function StartUp() {
 	    $("#btC").html('None, yet');
         $("#btT").html('All of it!');
-        $('#8or10').fadeOut(1000);
-		var strt = setTimeout(function(){$('#timer').fadeIn(1000);}, 1000);
+        $('#8or10').slideUp(1000);
+		var strt = setTimeout(function(){$('#timer').slideDown(1000);}, 1000);
 		$('#timeIn').prop("disabled",false)
     }
 
@@ -72,8 +72,8 @@ $(window).load(function() {
 		$("#btC").css('color', 'black');
         $("#btC").html('None, yet');
         $("#btT").html('All of it!');
-		$('#timer').fadeOut(1000);
-		var strt = setTimeout(function(){$('#8or10').fadeIn(1000);}, 1000);
+		$('#timer').slideUp(1000);
+		var strt = setTimeout(function(){$('#8or10').slideDown(1000);}, 1000);
     }
 
     function toBrk() {
