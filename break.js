@@ -1,6 +1,7 @@
 $(document)
 		.ready(
 				function() {
+					$('#history').fadeTo(2000, 0.2)
 					var maxBrkTot;
 					$('#8Hr').click(function() {
 						maxBrkTot = 30 * 60000;

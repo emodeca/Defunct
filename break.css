@@ -1,6 +1,7 @@
 body {
     background-color: #aaa;
     font-weight: bold;
+    text-align:center;
 }
 
 .rainbow {
@@ -233,7 +234,6 @@ body {
 /* Main marketing message and sign up button */m
 .jumbotron {
     text-align: center;
-    content-align: center;
     border-bottom: 1px solid #e5e5e5;
 }
 
