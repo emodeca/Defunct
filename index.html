@@ -1,50 +1,52 @@
-<html>
-
-<head>
-    <!-- Latest compiled and minified CSS -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-
-    <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="break.css">
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Anton">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
     <script language="JavaScript" type="text/javascript" src="jquery-1.11.0.js"></script>
     <script language="JavaScript" type="text/javascript" src="cookies.js"></script>
     <script language="JavaScript" type="text/javascript" src="break.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <title>Break Tracker</title>
 </head>
 
 <body>
-    <div id="8or10" class="t" hidden=1>
-        <h1>Do you work more than eight hours per day?</h1>
 
-        <input class="button" type="button" id="10Hr" value="Yes">
-        <input class="button" type="button" id="8Hr" value="No">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+		<a class="navbar-brand" href="#">Break Tracker</a>
+		</div>
+		</div>
+		</nav>
+
+<div class="container theme-showcase" role="main">
+    <div id="8or10" class="jumbotron" hidden=1>
+        <h2>Do you work more than eight hours per day?</h1>
+
+        <input class="btn btn-lg btn-default" type="button" id="10Hr" value="Yes">
+        <input class="btn btn-lg btn-default" type="button" id="8Hr" value="No">
     </div>
-    <div id="timer" class="q" hidden=1>
+    <div id="timer" class="jumbotron" hidden=1>
         <h1 id="working">Working<span class="one">.</span><span class="two">.</span><span class="three">.</span></h1>
 
-        <h2 id="displayc">Current Break Time :</h2>
+        <h3 id="displayc">Current Break Time :</h2>
 
-        <h1 id="btC">0</h1>
+        <h2 id="btC">0</h1>
 
+        <h3 id="displayt">Total Break Time Remaining:</h2>
 
+        <h2 id="btT">0</h1>
 
-
-        <h2 id="displayt">Total Break Time Remaining:</h2>
-
-
-
-
-        <h1 id="btT">0</h1>
-
-        <input id="timeIn" type="button" value="Go on Break" class="button">
-        <input id="resetT" type="button" value="Reset" class="button">
+        <input id="timeIn" type="button" value="Go on Break" class="btn btn-lg btn-default">
+        <input id="resetT" type="button" value="Reset" class="btn btn-lg btn-default">
     </div>
+	</div>
 </body>
 
 </html>

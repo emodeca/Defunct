@@ -18,7 +18,7 @@ $(window).load(function() {
 
     function StartUp() {
         $('#8or10').fadeOut(1000);
-        $('#timer').fadeIn(2000);
+		var strt = setInterval(function(){$('#timer').fadeIn(2000);}, 1000);
     }
 
 
