@@ -1,42 +1,50 @@
 <html>
 
-    <head>
-        <link rel="stylesheet" type="text/css" href="break.css">
-		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Anton">
-		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
-        <script language="JavaScript" type="text/javascript" src="jquery-1.11.0.js"></script>
-        <script language="JavaScript" type="text/javascript" src="cookies.js"></script>
-        <script language="JavaScript" type="text/javascript" src="break.js"></script>
-		<title>Break Tracker</title>
-    </head>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
-    <body>
-        <div id="8or10" class="t" hidden=1>
-             <h1>Do you work more than eight hours per day?</h1>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
 
-            <input class="button" type="button" id="10Hr" value="Yes">
-            <input class="button" type="button" id="8Hr" value="No">
-        </div>
-        <div id="timer" class="q" hidden=1>
-             <h1 id="working">Working<span class="one">.</span><span class="two">.</span><span class="three">.</span></h1>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="break.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Anton">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
+    <script language="JavaScript" type="text/javascript" src="jquery-1.11.0.js"></script>
+    <script language="JavaScript" type="text/javascript" src="cookies.js"></script>
+    <script language="JavaScript" type="text/javascript" src="break.js"></script>
+    <title>Break Tracker</title>
+</head>
 
-             <h2 id="displayc">Current Break Time :</h2>
+<body>
+    <div id="8or10" class="t" hidden=1>
+        <h1>Do you work more than eight hours per day?</h1>
 
-             <h1 id="btC">0</h1>
+        <input class="button" type="button" id="10Hr" value="Yes">
+        <input class="button" type="button" id="8Hr" value="No">
+    </div>
+    <div id="timer" class="q" hidden=1>
+        <h1 id="working">Working<span class="one">.</span><span class="two">.</span><span class="three">.</span></h1>
+
+        <h2 id="displayc">Current Break Time :</h2>
+
+        <h1 id="btC">0</h1>
 
 
 
-            
-<h2 id="displayt">Total Break Time Remaining:</h2>
+
+        <h2 id="displayt">Total Break Time Remaining:</h2>
 
 
 
-            
-<h1 id="btT">0</h1>
 
-            <input id="timeIn" type="button" value="Go on Break" class="button">
-            <input id="resetT" type="button" value="Reset" class="button">
-        </div>
-    </body>
+        <h1 id="btT">0</h1>
+
+        <input id="timeIn" type="button" value="Go on Break" class="button">
+        <input id="resetT" type="button" value="Reset" class="button">
+    </div>
+</body>
 
 </html>
