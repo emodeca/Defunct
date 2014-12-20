@@ -1,108 +1,139 @@
 body {
-    background-color:#aaa;
+    background-color: #aaa;
     font-weight: bold;
 }
+
 .rainbow {
     color: black;
     -webkit-animation: rbow 400ms infinite;
     animation: rbow 400ms infinite;
 }
+
 @-webkit-keyframes rbow {
     0% {
         color: #f00;
     }
+
     16% {
         color: #ff0;
     }
+
     32% {
         color: #0f0;
     }
+
     48% {
         color: #0ff;
     }
+
     64% {
         color: #00f;
     }
+
     82% {
         color: #f0f;
     }
+
     100% {
         color: #f00;
-    }
+    };
 }
+
 @keyframes rbow {
     0% {
         color: #f00;
     }
+
     16% {
         color: #ff0;
     }
+
     32% {
         color: #0f0;
     }
+
     48% {
         color: #0ff;
     }
+
     64% {
         color: #00f;
     }
+
     82% {
         color: #f0f;
     }
+
     100% {
         color: #f00;
-    }
+    };
 }
+
 .fadechange {
     -webkit-animation: fading 400ms infinite;
     animation: fading 400ms infinite;
 }
+
 @-webkit-keyframes fading {
     0% {
         background: #f77;
     }
+
     16% {
         background: #ff7;
     }
+
     32% {
         background: #7f7;
     }
+
     48% {
         background: #7ff;
     }
+
     64% {
         background: #77f;
     }
+
     82% {
         background: #f7f;
     }
+
     100% {
-        background:#f77;
-    }
+        background: #f77;
+    };
 }
+
 @keyframes fading {
     0% {
         background: #f77;
     }
+
     16% {
         background: #ff7;
     }
+
     32% {
         background: #7f7;
     }
+
     48% {
         background: #7ff;
     }
+
     64% {
         background: #77f;
     }
+
     82% {
         background: #f7f;
     }
+
     100% {
-        background:#f77;
-    }
+        background: #f77;
+    };
 }
+
 .one {
     opacity: 0;
     -webkit-animation: dot 1.3s infinite;
@@ -110,6 +141,7 @@ body {
     -webkit-animation-delay: 0.0s;
     animation-delay: 0.0s;
 }
+
 .two {
     opacity: 0;
     -webkit-animation: dot 1.3s infinite;
@@ -117,6 +149,7 @@ body {
     -webkit-animation-delay: 0.2s;
     animation-delay: 0.2s;
 }
+
 .three {
     opacity: 0;
     -webkit-animation: dot 1.3s infinite;
@@ -124,105 +157,115 @@ body {
     -webkit-animation-delay: 0.3s;
     animation-delay: 0.3s;
 }
+
 @-webkit-keyframes dot {
     0% {
         opacity: 0;
     }
+
     50% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
-    }
+    };
 }
+
 @keyframes dot {
     0% {
         opacity: 0;
     }
+
     50% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
-    }
+    };
 }
 
 /* Space out content a bit */
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
 .footer {
-  padding-right: 15px;
-  padding-left: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
-  padding-bottom: 19px;
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
+    padding-bottom: 19px;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
 }
 
 /* Custom page footer */
 .footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
 }
 
 /* Customize container */
 @media (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-}
-.container-narrow > hr {
-  margin: 30px 0;
+    .container {
+        max-width: 730px;
+    };
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
+.container-narrow > hr {
+    margin: 30px 0;
 }
+
+/* Main marketing message and sign up button */m
+.jumbotron {
+    text-align: center;
+    content-align: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+
 .jumbotron .btn {
-  padding: 14px 24px;
-  font-size: 21px;
+    padding: 14px 24px;
+    font-size: 21px;
 }
 
 /* Supporting marketing content */
 .marketing {
-  margin: 40px 0;
+    margin: 40px 0;
 }
+
 .marketing p + h4 {
-  margin-top: 28px;
+    margin-top: 28px;
 }
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   /* Remove the padding we set earlier */
-  .header,
+    .header,
   .marketing,
   .footer {
-    padding-right: 0;
-    padding-left: 0;
-  }
+        padding-right: 0;
+        padding-left: 0;
+    }
   /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
+    .header {
+        margin-bottom: 30px;
+    }
   /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+    .jumbotron {
+        border-bottom: 0;
+    };
 }

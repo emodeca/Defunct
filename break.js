@@ -14,10 +14,10 @@ $(document)
 					function StartUp() {
 						$("#btC").html('None, yet');
 						$("#btT").html('All of it!');
-						$('#8or10').slideUp(1000);
+						$('#8or10').slideUp(500);
 						var strt = setTimeout(function() {
-							$('#timer').slideDown(1000);
-						}, 1000);
+							$('#timer').slideDown(500);
+						}, 500);
 						$('#timeIn').prop("disabled", false)
 					}
 
@@ -66,10 +66,10 @@ $(document)
 						$(".timeVal").css('color', 'black');
 						$("#btC").html('None, yet');
 						$("#btT").html('All of it!');
-						$('#timer').slideUp(1000);
+						$('#timer').slideUp(500);
 						var strt = setTimeout(function() {
-							$('#8or10').slideDown(1000);
-						}, 1000);
+							$('#8or10').slideDown(500);
+						}, 500);
 					}
 
 					function toBrk() {
