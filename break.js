@@ -1,12 +1,5 @@
 $(window).load(function() {
-    $(rdy);
     var maxBrkTot;
-
-    function rdy() {
-        $('#8or10').fadeIn(1000);
-        reset();
-    }
-
     $('#8Hr').click(function() {
         maxBrkTot = 30 * 60000;
         StartUp();
@@ -17,8 +10,10 @@ $(window).load(function() {
     });
 
     function StartUp() {
+	    document.getElementById("btC").innerHTML = 'None, yet';
+        document.getElementById("btT").innerHTML = 'All of it!';
         $('#8or10').fadeOut(1000);
-		var strt = setInterval(function(){$('#timer').fadeIn(2000);}, 1000);
+		var strt = setTimeout(function(){$('#timer').fadeIn(1000);}, 1000);
     }
 
 
@@ -72,8 +67,11 @@ $(window).load(function() {
         trackBrk = 0;
         trackTotal = 0;
         document.getElementById("btT").style.color = "#000";
+		document.getElementById("btC").style.color = "#000";
         document.getElementById("btC").innerHTML = 'None, yet';
         document.getElementById("btT").innerHTML = 'All of it!';
+		$('#timer').fadeOut(1000);
+		var strt = setTimeout(function(){$('#8or10').fadeIn(1000);}, 1000);
     }
 
     function toBrk() {
