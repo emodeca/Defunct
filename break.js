@@ -10,10 +10,11 @@ $(window).load(function() {
     });
 
     function StartUp() {
-	    document.getElementById("btC").innerHTML = 'None, yet';
-        document.getElementById("btT").innerHTML = 'All of it!';
+	    $("#btC").html('None, yet');
+        $("#btT").html('All of it!');
         $('#8or10').fadeOut(1000);
 		var strt = setTimeout(function(){$('#timer').fadeIn(1000);}, 1000);
+		$('#timeIn').prop("disabled",false)
     }
 
 
@@ -32,22 +33,22 @@ $(window).load(function() {
         trackBrk = (Date.now() - timeNow);
         trackTotal = totalBrk + trackBrk;
         if (trackTotal > maxBrkTot) {
-            document.getElementById("btT").style.color = "#d00";
+            $("#btT").css('color', "#d00");
         } else if ((maxBrkTot - trackTotal) < (10 * 60000)) {
-            document.getElementById("btT").style.color = "#f90";
+            $("#btT").css('color', "#f90");
         } else {
-            document.getElementById("btT").style.color = "#000";
+            $("#btT").css('color', "#000");
         }
 
         if (trackBrk > maxBrkCur) {
-            document.getElementById("btC").style.color = "#d00";
+            $("#btC").css('color', "#d00");
         } else if ((maxBrkCur - trackBrk) < (5 * 60000)) {
-            document.getElementById("btC").style.color = "#f90";
+            $("#btC").css('color', "#f90");
         } else {
-            document.getElementById("btC").style.color = "#000";
+            $("#btC").css('color', "#000");
         }
-        document.getElementById("btC").innerHTML = millisecondsToStr(maxBrkCur - trackBrk);
-        document.getElementById("btT").innerHTML = millisecondsToStr(maxBrkTot - trackTotal);
+        $("#btC").html(millisecondsToStr(maxBrkCur - trackBrk));
+        $("#btT").html(millisecondsToStr(maxBrkTot - trackTotal));
     }
 
     $('#timeIn').click(function() {
@@ -63,13 +64,14 @@ $(window).load(function() {
 
     function reset() {
 
+		$('#timeIn').prop("disabled",true);
         totalBrk = 0;
         trackBrk = 0;
         trackTotal = 0;
-        document.getElementById("btT").style.color = "#000";
-		document.getElementById("btC").style.color = "#000";
-        document.getElementById("btC").innerHTML = 'None, yet';
-        document.getElementById("btT").innerHTML = 'All of it!';
+        $("#btT").css('color', 'black');
+		$("#btC").css('color', 'black');
+        $("#btC").html('None, yet');
+        $("#btT").html('All of it!');
 		$('#timer').fadeOut(1000);
 		var strt = setTimeout(function(){$('#8or10').fadeIn(1000);}, 1000);
     }
@@ -79,10 +81,10 @@ $(window).load(function() {
         $('#resetT').hide();
         $('#timeIn').val('Come back from Break');
         onBrk = 1;
-        document.getElementById("displayc").innerHTML = "Current Break Time Remaining:";
+        $("#displayc").html("Current Break Time Remaining:");
         upInt = setInterval(update, 100);
         $('body').addClass('fadechange');
-        document.getElementById('working').innerHTML = breaking;
+        $('#working').html(breaking);
         $('#working').addClass('rainbow');
 
     }
@@ -92,12 +94,12 @@ $(window).load(function() {
         $('#resetT').show();
         $('#timeIn').val('Go on Break');
         onBrk = 0;
-        document.getElementById("displayc").innerHTML = "Last Break Time:";
-        document.getElementById("btT").innerHTML = millisecondsToStr(maxBrkTot - totalBrk);
-        document.getElementById("btC").innerHTML = millisecondsToStr(trackBrk);
+        $("#displayc").html("Last Break Time:");
+        $("#btT").html(millisecondsToStr(maxBrkTot - totalBrk));
+        $("#btC").html(millisecondsToStr(trackBrk));
         clearInterval(upInt);
         $('body').removeClass('fadechange');
-        document.getElementById('working').innerHTML = working;
+        $('#working').html(working);
         $('#working').removeClass('rainbow');
 
     }
