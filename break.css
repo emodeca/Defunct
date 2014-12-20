@@ -53,7 +53,6 @@ body {
     }
 }
 .fadechange {
-    background: black;
     -webkit-animation: fading 400ms infinite;
     animation: fading 400ms infinite;
 }

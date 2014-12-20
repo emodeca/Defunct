@@ -32,20 +32,12 @@ $(window).load(function() {
     function update() {
         trackBrk = (Date.now() - timeNow);
         trackTotal = totalBrk + trackBrk;
-        if (trackTotal > maxBrkTot) {
-            $("#btT").css('color', "#d00");
-        } else if ((maxBrkTot - trackTotal) < (10 * 60000)) {
-            $("#btT").css('color', "#f90");
+        if (trackTotal > maxBrkTot || trackBrk > maxBrkCur) {
+            $("body").css('background-color', "#d00");
+        } else if ((maxBrkTot - trackTotal) < (10 * 60000) || (maxBrkCur - trackBrk) < (5 * 60000)) {
+            $("body").css('background-color', "#f90");
         } else {
-            $("#btT").css('color', "#000");
-        }
-
-        if (trackBrk > maxBrkCur) {
-            $("#btC").css('color', "#d00");
-        } else if ((maxBrkCur - trackBrk) < (5 * 60000)) {
-            $("#btC").css('color', "#f90");
-        } else {
-            $("#btC").css('color', "#000");
+            $("body").css('background-color', "#aaa");
         }
         $("#btC").html(millisecondsToStr(maxBrkCur - trackBrk));
         $("#btT").html(millisecondsToStr(maxBrkTot - trackTotal));
@@ -68,8 +60,7 @@ $(window).load(function() {
         totalBrk = 0;
         trackBrk = 0;
         trackTotal = 0;
-        $("#btT").css('color', 'black');
-		$("#btC").css('color', 'black');
+        $(".timeVal").css('color', 'black');
         $("#btC").html('None, yet');
         $("#btT").html('All of it!');
 		$('#timer').slideUp(1000);
@@ -83,7 +74,6 @@ $(window).load(function() {
         onBrk = 1;
         $("#displayc").html("Current Break Time Remaining:");
         upInt = setInterval(update, 100);
-        $('body').addClass('fadechange');
         $('#working').html(breaking);
         $('#working').addClass('rainbow');
 
@@ -98,7 +88,6 @@ $(window).load(function() {
         $("#btT").html(millisecondsToStr(maxBrkTot - totalBrk));
         $("#btC").html(millisecondsToStr(trackBrk));
         clearInterval(upInt);
-        $('body').removeClass('fadechange');
         $('#working').html(working);
         $('#working').removeClass('rainbow');
 
