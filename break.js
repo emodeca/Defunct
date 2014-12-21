@@ -107,25 +107,19 @@ $(document)
 						var seconds = 0;
 						if (temp < 0) {
 							minutes = Math.ceil((temp % 3600) / 60);
+							seconds = Math.ceil(temp % 60);
 						} else {
 							minutes = Math.floor((temp % 3600) / 60);
-						}
-
-						if (Math.abs(Math.floor(temp % 60)) < 10
-								&& minutes === 0) {
-							seconds = Math.floor(temp % 60);
-						} else if (Math.abs(Math.floor(temp % 60)) < 10) {
-							seconds = '0' + Math.abs(Math.floor(temp % 60));
-						} else {
 							seconds = Math.floor(temp % 60);
 						}
-
-						if (minutes) {
-							return minutes + ':' + Math.abs(seconds);
-						} else {
+						if (!minutes) {
 							return seconds + ' second' + numberEnding(seconds);
+						} else if (seconds < 10) {
+							seconds = Math.abs(seconds.toString())
+							return minutes + ':0' + seconds;
+						} else {
+							return minutes + ':' + Math.abs(seconds);
 						}
-						return '0';
 					}
 
 					function reset() {
