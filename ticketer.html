@@ -1,59 +1,74 @@
 <!doctype html>
 <html lang="en">
 <head>
+
     <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Calera Tools</title>
+    <title>Ticketer</title>
 
-<link rel="stylesheet" href="css/pure-min.css">
-<link rel="stylesheet" href="css/side-menu.css">     
+    <script type="text/javascript" src="js/ui.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+    <link rel="stylesheet" href="css/pure-min.css">
+    <link rel="stylesheet" href="css/side-menu.css">     
 
 </head>
 <body>
 
-<div id="layout">
-    <!-- Menu toggle -->
-    <a href="#menu" id="menuLink" class="menu-link"><span></span></a>
-    <div id="menu">
-        <div class="pure-menu">
-            <a class="pure-menu-heading" href="#">Calero</a>
-            <ul class="pure-menu-list">
-                <li class="pure-menu-item"><a href="index.html" class="pure-menu-link">Breaker</a></li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Ticketer</a></li>
-            </ul>
+    <div id="layout">
+        <!-- Menu toggle -->
+        <a href="#menu" id="menuLink" class="menu-link"></a>
+        <div id="menu">
+            <div class="pure-menu">
+                <a class="pure-menu-heading" href="#">Calero</a>
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item"><a href="index.html" class="pure-menu-link">Breaker</a></li>
+                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Ticketer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            <div class="header">
+                <h1>Ticketer</h1>
+                <h2>A tool for BCBG / Panera calls</h2>
+            </div>
+
+            <div class="content">
+                <h2 class="content-subhead">Work in Progress...</h2>
+
+                <form class="pure-form pure-form-aligned pure-g">
+                    <fieldset class="pure-group pure-u-2-3">
+                        <legend>Initial Contact Info</legend>
+                        <input id="storenumber" placeholder="Café Number" required>
+                        <input id="callername" placeholder="Caller's Name" required>
+                        <input id="identifier" placeholder="Kiosk Number" required>
+                        <input pattern="^(\d{3})-(\d{3})-(\d{3})$" id="verifoneserial" placeholder="Verifone Serial Number" required="required" type="text">
+                    </fieldset>
+                    <fieldset class="pure-u-2-3">
+                        <legend>Reason for Contact</legend>
+                        <div class="pure-control-group ">
+                            <textarea class="pure-input-1-2" id="reason" placeholder="Initial reason for contact?"></textarea>
+                        </div>
+                        <div class="pure-control-group">
+                            <label for="broken" class="pure-checkbox">Screen Cracked?</label><input id="broken" type="checkbox">
+                        </div>
+                        <div class="pure-control-group">
+                            <label for="damage" class="pure-checkbox">Other Damage?</label><input id="damage" type="checkbox">
+                        </div>
+                        <div class="pure-control-group">
+                            <label for="charging" class="pure-checkbox">Charging Issues?</label><input id="charging" type="checkbox">
+                        </div>
+                    </fieldset>
+                    <fieldset class="pure-u-2-3">
+                        <legend>Initial Troubleshooting</legend>
+                        <div class="pure-control-group">
+                            <label for="wifi" class="pure-checkbox">Verified WiFi?</label><input id="wifi" type="checkbox">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
         </div>
     </div>
-    <div id="main">
-        <div class="header">
-            <h1>Ticketer</h1>
-            <h2>A tool for BCBG / Panera calls</h2>
-        </div>
 
-        <div class="content">
-            <h2 class="content-subhead">Work in Progress...</h2>
-
-            <form class="pure-form pure-form-aligned">
-                <fieldset>
-                    <legend>Panera</legend>
-                    <div class="pure-control-group">
-                    <label for="storenumber">Store Number</label><input id="storenumber" placeholder="Store Number" required></div>
-                    <div class="pure-control-group">
-                    <label for="callername">Caller's Name</label><input id="callername" placeholder="Caller's Name" required></div>
-                    <div class="pure-control-group">
-                    <label for="identifier">Kiosk Number</label><input id="identifier" placeholder="Kiosk Number" required></div>
-                    <div class="pure-control-group">
-                    <label for="verifoneserial">Verifone Serial Number</label><input id="verifoneserial" placeholder="Verifone Serial Number" required></div>
-                </fieldset>
-            </form>
-            <p>
-
-            </p>
-        </div>
-    </div>
-</div>
-
-<script src="js/ui.js"></script>
 
 </body>
-</html>

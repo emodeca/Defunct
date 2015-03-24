@@ -50,8 +50,8 @@ $(document).ready(
 					function StartUp() {
 						$("#btC").html('None, yet');
 						$("#btT").html('All of it!');
-						$('#8or10').slideUp(500);
-						setTimeout(function(){	$('#timer').slideDown(500);},500);
+						$('#8or10').fadeOut(500);
+						setTimeout(function(){	$('#timer').fadeIn(500);},500);
 						$('#timeIn').prop("disabled", false);
 					}
 
@@ -124,9 +124,9 @@ $(document).ready(
 						vars.totalBrk = vars.trackBrk = vars.trackTotal = 0;
 						$("#btC").html('None, yet');
 						$("#btT").html('All of it!');
-						$('#timer').slideUp(500);
+						$('#timer').fadeOut(500);
 						var strt = setTimeout(function() {
-							$('#8or10').slideDown(500);
+							$('#8or10').fadeIn(500);
 						}, 500);
 						clearInterval(upInt)
 						delete localStorage.vars;
