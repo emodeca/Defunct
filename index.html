@@ -1,75 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-<link rel="stylesheet" type="text/css" href="break.css">
-<link rel="stylesheet" type="text/css"
-	href="http://fonts.googleapis.com/css?family=Roboto">
-<script language="JavaScript" type="text/javascript"
-	src="jquery-1.11.0.js"></script>
-<script language="JavaScript" type="text/javascript" src="break.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-<title>Break Tracker</title>
-</head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
 
+    <title>Responsive Side Menu &ndash; Layout Examples &ndash; Pure</title>
+
+    
+
+
+<link rel="stylesheet" href="css/pure-min.css">
+<link rel="stylesheet" href="css/side-menu.css"> 
+
+    
+
+</head>
 <body>
 
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		<div class="container">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#">Break Tracker</a>
-			</div>
-		</div>
-	</nav>
 
-	<div class="container theme-showcase" role="main">
-		<div id="8or10" class="jumbotron">
-			<h3>Do you work more than eight hours per day?</h3>
 
-			<input class="btn btn-lg btn-default" type="button" id="10Hr"
-				value="Yes"> <input class="btn btn-lg btn-default"
-				type="button" id="8Hr" value="No">
-		</div>
-		<div id="timer" class="jumbotron" hidden=1>
-			<p>
-			<h1 id="working">
-				Working<span class="one">.</span><span class="two">.</span><span
-					class="three">.</span>
-			</h1>
-			</p>
-			<p>
-			<h3 id="displayc">Current Break Time :</h3>
 
-			<h2 id="btC" class="timeVal"></h2>
-			</p>
-			<p>
-			<h3 id="displayt">Total Break Time Remaining:</h3>
 
-			<h2 id="btT" class="timeVal"></h2>
-			</p>
-			<input id="timeIn" type="button" value="Go on Break"
-				class="btn btn-lg btn-default"> <input id="resetT"
-				type="button" value="Reset" class="btn btn-lg btn-default">
-		</div>
-		<div id="history" class="jumbotron">
-			<h2>History:</h2>
-			<div class="row">
-				<div class="col-sm-4">
-					<h3>
-						Coming soon<span class="one">.</span><span class="two">.</span><span
-							class="three">.</span>
-					</h3>
-				</div>
-			</div>
-		</div>
-	</div>
+
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu">
+            <a class="pure-menu-heading" href="#">Calero</a>
+
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="breaker/index.html" class="pure-menu-link">Breaker</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Ticketer</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="header">
+            <h1>Ticketer</h1>
+            <h2>A tool for BCBG / Panera calls</h2>
+        </div>
+
+        <div class="content">
+            <h2 class="content-subhead">How to use this layout</h2>
+            <p>
+
+            </p>
+        </div>
+    </div>
+</div>
+
+<script src="js/ui.js"></script>
+
 </body>
-
 </html>
