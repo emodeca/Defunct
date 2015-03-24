@@ -44,7 +44,7 @@
                         <input id="identifier" placeholder="Kiosk Number" required>
                         <input pattern="^(\d{3})-(\d{3})-(\d{3})$" id="verifoneserial" placeholder="Verifone Serial Number" required="required" type="text">
                     </fieldset>
-                    <fieldset class="pure-u-2-3">
+                    <fieldset class="pure-u-1-1">
                         <legend>Reason for Contact</legend>
                         <div class="pure-control-group ">
                             <textarea class="pure-input-1-2" id="reason" placeholder="Initial reason for contact?"></textarea>
@@ -59,12 +59,60 @@
                             <label for="charging" class="pure-checkbox">Charging Issues?</label><input id="charging" type="checkbox">
                         </div>
                     </fieldset>
-                    <fieldset class="pure-u-2-3">
+                    <fieldset class="pure-u-1-1">
                         <legend>Initial Troubleshooting</legend>
                         <div class="pure-control-group">
-                            <label for="wifi" class="pure-checkbox">Connected to WiFi?</label><input id="wifi" type="checkbox">
+                            <label for="wifi" class="pure-checkbox">
+                                Connected to WiFi?
+                            </label>
+                            <input id="wifi" type="checkbox">
+                        </div>
+                        <div class="pure-control-group" id="wifiw">
+                            <input type="text" placeholder="Why not?">
+                        </div>
+                        <div class="pure-control-group">
+                            <label for="reset" class="pure-checkbox">
+                                Power Cycle?
+                            </label>
+                            <input id="reset" type="checkbox">
+                        </div>
+                        <div class="pure-control-group" id="resetw">
+                            <input type="text" placeholder="Why not?">
+                        </div>
+                        <div class="pure-control-group">
+                            <label for="mdm" class="pure-checkbox">
+                                Verified MDM?
+                            </label>
+                            <input id="mdm" type="checkbox">
+                        </div>
+                        <div class="pure-control-group" id="mdmw">
+                            <input type="text" placeholder="Why not?">
+                        </div>
+                        <div class="pure-control-group">
+                            <label for="cardreader" class="pure-checkbox">
+                                Card Reader Working?
+                            </label>
+                            <input id="cardreader" type="checkbox">
+                        </div>
+                        <div class="pure-control-group" id="cardreaderw">
+                            <input type="text" placeholder="Why not?">
+                        </div>
+                        <div class="pure-control-group">
+                            <label for="married" class="pure-checkbox">
+                                Devices Married?
+                            </label>
+                            <input id="married" type="checkbox">
+                        </div>
+                        <div class="pure-control-group" id="marriedw">
+                            <input type="text" placeholder="Why not?">
+                        </div>
+                        <div class="pure-control-group">
+                            <textarea class="pure-input-1-2" id="actions" placeholder="Actions taken to resolve issue"></textarea>
                         </div>
                     </fieldset>
+                    <fieldset class="pure-u-1-1">
+                        <legend>Resolution</legend>
+                        <textarea class="pure-input-1-2" id="resolution" placeholder="Resolution"></textarea>
                 </form>
             </div>
         </div>
