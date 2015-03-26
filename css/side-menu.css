@@ -111,3 +111,6 @@ The content `<div>` is where all your content goes.
     }
 }
 
+input {
+    border: 1px solid black;
+}

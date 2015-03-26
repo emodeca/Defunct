@@ -4,7 +4,7 @@ var toAppend = [
     "Caller's Name:",
     "iPad Identifier:",
     "Verifone Sled Serial #:",
-    "\nSituation/Issue for Initial Contact:",
+    "\nCalero Ticket #:\n\nSituation/Issue for Initial Contact:",
     "Screen Cracked:",
     "Other recent physical damage or trauma:",
     "Experiencing charging issues:",
