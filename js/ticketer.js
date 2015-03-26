@@ -18,6 +18,8 @@ var toAppend = [
 ];
 
 $('document').ready(function() {
+	$("#identifier").mask("9?9", {placeholder:" "});
+	$("#verifoneserial").mask("999-999-999",{placeholder:"#"});
 
     $("#output").children("textarea").focus(function() {
         var $this = $(this);
