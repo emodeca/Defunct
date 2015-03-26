@@ -19,7 +19,7 @@ var toAppend = [
 
 $('document').ready(function() {
 
-    $("#output").focus(function() {
+    $("#output").children("textarea").focus(function() {
         var $this = $(this);
         $this.select();
 
@@ -67,6 +67,13 @@ $('document').ready(function() {
             }
             j++;
         }
-        $("#output").val(lawg);
+        $("#panera").hide();
+        $("#output").children("textarea").val(lawg)
+        $("#output").fadeIn("fast");
+
     });
+    $("#edit").click(function() {
+        $("#output").hide();
+        $("#panera").fadeIn("fast");
+    })
 });

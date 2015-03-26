@@ -12,6 +12,11 @@
     .submit {
         text-align: right;
     }
+    
+    #output {
+        display: none;
+        text-align: right;
+    }
     </style>
     <title>Ticketer</title>
 </head>
@@ -38,8 +43,8 @@
                 <h2>A tool for BCBG / Panera calls</h2>
             </div>
             <div class="content">
-                <h2 class="content-subhead">Work in Progress...</h2>
-                <form class="pure-form pure-form-aligned">
+                <h2 class="content-subhead">Panera</h2>
+                <form class="pure-form pure-form-aligned" id="panera">
                     <fieldset class="pure-group pure-u-2-3">
                         <legend>Initial Contact Info</legend>
                         <input id="storenumber" placeholder="Café Number" required>
@@ -50,7 +55,7 @@
                     <fieldset>
                         <legend>Reason for Contact</legend>
                         <div class="pure-control-group">
-                            <textarea class="pure-input-1-2" id="reason" placeholder="Initial reason for contact?"></textarea>
+                            <textarea class="pure-input-1" rows="5" id="reason" placeholder="Initial reason for contact?"></textarea>
                         </div>
                         <div class="pure-control-group">
                             <label for="broken" class="pure-checkbox">Screen Cracked?</label>
@@ -95,20 +100,24 @@
                                 <input type="text" class="pure-u-2-3" placeholder="Why not?" id="why">
                             </div>
                             <div class="pure-u-1">
-                                <textarea class="pure-input-1-2" id="actions" placeholder="Actions taken to resolve issue"></textarea>
+                                <textarea class="pure-input-1" rows="5" id="actions" placeholder="Actions taken to resolve issue"></textarea>
                             </div>
                         </div>
                     </fieldset>
                     <fieldset>
                         <legend>Resolution</legend>
-                        <textarea class="pure-input-1-2" id="resolution" placeholder="Resolution"></textarea>
+                        <textarea class="pure-input-1" id="resolution" placeholder="Resolution"></textarea>
                     </fieldset>
                     <div class="submit">
                         <input type="button" class="pure-button pure-button-primary" id="submit" value="Submit"></input>
                     </div>
                     <br>
-                    <textarea id="output" class="pure-input-1" placeholder="Ticket Text" rows="25"></textarea>
                 </form>
+                <div id="output">
+                    <textarea class="pure-u-1" placeholder="Ticket Text" rows="25"></textarea>
+                    <p></p>
+                    <input type="button" class="pure-button pure-button-primary" id="edit" value="Edit"></input>
+                </div>
             </div>
         </div>
     </div>
