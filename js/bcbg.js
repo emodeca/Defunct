@@ -1,11 +1,11 @@
 var allInputs;
 var toAppend = [
-    "Store #:",
+    "Calero Ticket #:\nStore #:",
     "Associate's Name:",
     "Associate's EIN:",
     "iPad Asset Tag #",
     "Verifone Asset Tag #:",
-    "\nCalero Ticket #:\n\nSituation/Issue for Initial Contact:",
+    "\nSituation/Issue for Initial Contact:",
     "Screen Cracked:",
     "Other recent physical damage or trauma:",
     "Experiencing Charging Issues:",
