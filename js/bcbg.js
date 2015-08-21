@@ -3,7 +3,7 @@ var toAppend = [
     "Calero Ticket #:\nStore #:",
     "Associate's Name:",
     "Associate's EIN:",
-    "iPad Asset Tag #",
+    "iPad Asset Tag #:",
     "Verifone Asset Tag #:",
     "\nSituation/Issue for Initial Contact:",
     "Screen Cracked:",
