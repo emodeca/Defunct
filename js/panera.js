@@ -59,8 +59,9 @@ $('document').ready(function() {
 			if (allInputs[j].type == "radio"){
 				if (allInputs[j].checked)
 				{lawg += toAppend[i] + " " + allInputs[j].value + "\n";}
-			} else if ( allInputs[j].type =="radio"){
-				j++;
+				else {
+					i--; //Don't even ask...
+				}
 			} else if  (allInputs[j].type != "checkbox") {
 				lawg += toAppend[i] + " " + allInputs[j].value + "\n";
 			} else if (allInputs[j].checked && allInputs[j + 1].id == "why") {
