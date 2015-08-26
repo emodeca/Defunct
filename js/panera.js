@@ -1,5 +1,6 @@
 var allInputs;
 var toAppend = [
+	"Call Type:",
     "Calero Ticket #:\nStore #:",
     "Caller's Name:",
     "iPad Identifier:",

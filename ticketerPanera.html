@@ -1,127 +1,131 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/pure-min.css">
-        <link rel="stylesheet" type="text/css" href="css/side-menu.css">
-        <link rel='stylesheet' id='tws-source-css'  href='http://fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400%2C600%2C700%2C400italic%2C600italic%2C700italic&#038;ver=1.0' type='text/css' media='' />
-        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-        <script type="text/javascript" src="js/maskedinput.js"></script>
-        <script type="text/javascript" src="js/panera.js"></script>
-        <style>
-        html, button, input, select, textarea,
-        .pure-g [class *= "pure-u"] {
-        font-family: 'Source Sans Pro', sans-serif;
-        }
-        .submit{
-        text-align: right;
-        }
-        .cwidth {
-        width:10em;
-        }
-        </style>
-        <title>Ticketer</title>
-    </head>
-    <body>
-        <div class="pure-g">
-            <div id="menu" class="pure-u-1-12">
-                <div class="pure-menu">
-                    <a class="pure-menu-heading" href="#">Calero</a>
-                    <ul class="pure-menu-list">
-                        <li class="pure-menu-item"><a href="index.html" class="pure-menu-link">Breaker</a></li>
-                        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-                            <a href="#" id="menuLink1" class="pure-menu-link">Ticketer</a>
-                            <ul class="pure-menu-children">
-                                <li class="pure-menu-item"><a href="ticketerBCBG.html" class="pure-menu-link">BCBG</a></li>
-                                <li class="pure-menu-item"><a href="ticketerPanera.html" class="pure-menu-link">Panera</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!-- BODY-->
-            <div id="main" class="pure-u-4-5">
-                <div class="content">
-                    <h2 class="content-subhead">
-                    Panera
-                    </h2>
-                    <form class="pure-form pure-form-aligned" id="panera">
-                        <fieldset class="pure-group pure-u-2-3">
-                            <legend>Initial Contact Info</legend>
-                            <input id="storenumber" placeholder="Café Number" required>
-                            <input id="callername" placeholder="Caller's Name" required>
-                            <input id="identifier" placeholder="Kiosk Number" required>
-                            <input pattern="^(\d{3})-(\d{3})-(\d{3})$" id="verifoneserial" placeholder="Verifone Serial Number" required="required" type="text">
-                        </fieldset>
-                        <fieldset>
-                            <legend>Reason for Contact</legend>
-                            <div class="pure-control-group">
-                                <textarea class="pure-input-1" rows="5" id="reason" placeholder="Initial reason for contact?"></textarea>
-                            </div>
-                            <div class="pure-control-group">
-                                <label for="broken" class="pure-checkbox">Screen Cracked?</label>
-                                <input id="broken" type="checkbox">
-                            </div>
-                            <div class="pure-control-group">
-                                <label for="damage" class="pure-checkbox">Other Damage?</label>
-                                <input id="damage" type="checkbox">
-                            </div>
-                            <div class="pure-control-group">
-                                <label for="charging" class="pure-checkbox">Charging Issues?</label>
-                                <input id="charging" type="checkbox">
-                            </div>
-                        </fieldset>
-                        <fieldset>
-                            <legend>Initial Troubleshooting</legend>
-                            <h3> Verify the following:</h3>
-                            <div class="pure-g" id="trouble">
-                                <div class="pure-control-group pure-u-1 pure-u-md-2-3">
-                                    <label for="wifi" class="pure-checkbox">Connected to WiFi?</label>
-                                    <input id="wifi" type="checkbox">
-                                    <input type="text" class="pure-u-2-3" placeholder="Why not?" id="why">
-                                </div>
-                                <div class="pure-control-group pure-u-1 pure-u-md-2-3">
-                                    <label for="reset" class="pure-checkbox">Power Cycle?</label>
-                                    <input id="reset" type="checkbox">
-                                    <input type="text" class="pure-u-2-3" placeholder="Why not?" id="why">
-                                </div>
-                                <div class="pure-control-group pure-u-1 pure-u-md-2-3">
-                                    <label for="mdm" class="pure-checkbox">Connected to MDM?</label>
-                                    <input id="mdm" type="checkbox">
-                                    <input type="text" class="pure-u-2-3" placeholder="Why not?" id="why">
-                                </div>
-                                <div class="pure-control-group pure-u-1 pure-u-md-2-3">
-                                    <label for="cardreader" class="pure-checkbox">Card Reader?</label>
-                                    <input id="cardreader" type="checkbox">
-                                    <input type="text" class="pure-u-2-3" placeholder="Why not?" id="why">
-                                </div>
-                                <div class="pure-control-group pure-u-1 pure-u-md-2-3">
-                                    <label for="married" class="pure-checkbox">Devices Married?</label>
-                                    <input id="married" type="checkbox">
-                                    <input type="text" class="pure-u-2-3" placeholder="Why not?" id="why">
-                                </div>
-                                <div class="pure-u-1">
-                                    <textarea class="pure-input-1" rows="5" id="actions" placeholder="Actions taken to resolve issue"></textarea>
-                                </div>
-                            </div>
-                        </fieldset>
-                        <fieldset>
-                            <legend>Resolution</legend>
-                            <textarea class="pure-input-1" id="resolution" placeholder="Resolution"></textarea>
-                        </fieldset>
-                        <div class="submit">
-                            <input type="button" class="pure-button pure-button-primary" id="submit" value="Submit"></input>
-                        </div>
-                        <br>
-                    </form>
-                    <div id="output">
-                        <textarea class="pure-u-1" placeholder="Ticket Text" rows="25" ></textarea>
-                        <p></p>
-                        <input type="button" class="pure-button pure-button-primary" id="edit" value="Edit"></input>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script type="text/javascript" src="js/ui.js"></script>
-    </body>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/pure-min.css">
+		<link rel="stylesheet" type="text/css" href="css/side-menu.css">
+		<link rel='stylesheet' id='tws-source-css'  href='http://fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400%2C600%2C700%2C400italic%2C600italic%2C700italic&#038;ver=1.0' type='text/css' media='' />
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+		<script type="text/javascript" src="js/maskedinput.js"></script>
+		<script type="text/javascript" src="js/panera.js"></script>
+		<style>
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+	.submit{
+		text-align: right;
+	}
+	.cwidth {
+		width:10em;
+	}
+		</style>
+		<title>Ticketer</title>
+	</head>
+	<body>
+		<div class="pure-g">
+			<div id="menu" class="pure-u-1-12">
+				<div class="pure-menu">
+					<a class="pure-menu-heading" href="#">Calero</a>
+					<ul class="pure-menu-list">
+						<li class="pure-menu-item"><a href="index.html" class="pure-menu-link">Breaker</a></li>
+						<li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+							<a href="#" id="menuLink1" class="pure-menu-link">Ticketer</a>
+							<ul class="pure-menu-children">
+								<li class="pure-menu-item"><a href="ticketerBCBG.html" class="pure-menu-link">BCBG</a></li>
+								<li class="pure-menu-item"><a href="ticketerPanera.html" class="pure-menu-link">Panera</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- BODY-->
+			<div id="main" class="pure-u-4-5">
+				<div class="content">
+					<h2 class="content-subhead">
+						Panera
+					</h2>
+					<form class="pure-form pure-form-aligned" id="panera">
+							<label for="kiosk" class="pure-radio">
+								<input id="kiosk" type="radio" name ="ipadtype"  value="Kiosk" checked> Kiosk</label>
+							<label for="slate" class="pure-radio">
+								<input id="slate" type="radio" name="ipadtype" value="Manager Slate"> Manager Slate</label>
+						<fieldset class="pure-group pure-u-2-3">
+							<legend>Initial Contact Info</legend>
+							<input id="storenumber" placeholder="Café Number" required>
+							<input id="callername" placeholder="Caller's Name" required>
+							<input id="identifier" placeholder="Kiosk Number" required>
+							<input pattern="^(\d{3})-(\d{3})-(\d{3})$" id="verifoneserial" placeholder="Verifone Serial Number" required="required" type="text">
+						</fieldset>
+						<fieldset>
+							<legend>Reason for Contact</legend>
+							<div class="pure-control-group">
+								<textarea class="pure-input-1" rows="5" id="reason" placeholder="Initial reason for contact?"></textarea>
+							</div>
+							<div class="pure-control-group">
+								<label for="broken" class="pure-checkbox">Screen Cracked?</label>
+								<input id="broken" type="checkbox">
+							</div>
+							<div class="pure-control-group">
+								<label for="damage" class="pure-checkbox">Other Damage?</label>
+								<input id="damage" type="checkbox">
+							</div>
+							<div class="pure-control-group">
+								<label for="charging" class="pure-checkbox">Charging Issues?</label>
+								<input id="charging" type="checkbox">
+							</div>
+						</fieldset>
+						<fieldset>
+							<legend>Initial Troubleshooting</legend>
+							<h3> Verify the following:</h3>
+							<div class="pure-g" id="trouble">
+								<div class="pure-control-group pure-u-1 pure-u-md-2-3">
+									<label for="wifi" class="pure-checkbox">Connected to WiFi?</label>
+									<input id="wifi" type="checkbox">
+									<input type="text" class="pure-u-2-3" placeholder="Why not?" id="why">
+								</div>
+								<div class="pure-control-group pure-u-1 pure-u-md-2-3">
+									<label for="reset" class="pure-checkbox">Power Cycle?</label>
+									<input id="reset" type="checkbox">
+									<input type="text" class="pure-u-2-3" placeholder="Why not?" id="why">
+								</div>
+								<div class="pure-control-group pure-u-1 pure-u-md-2-3">
+									<label for="mdm" class="pure-checkbox">Connected to MDM?</label>
+									<input id="mdm" type="checkbox">
+									<input type="text" class="pure-u-2-3" placeholder="Why not?" id="why">
+								</div>
+								<div class="pure-control-group pure-u-1 pure-u-md-2-3">
+									<label for="cardreader" class="pure-checkbox">Card Reader?</label>
+									<input id="cardreader" type="checkbox">
+									<input type="text" class="pure-u-2-3" placeholder="Why not?" id="why">
+								</div>
+								<div class="pure-control-group pure-u-1 pure-u-md-2-3">
+									<label for="married" class="pure-checkbox">Devices Married?</label>
+									<input id="married" type="checkbox">
+									<input type="text" class="pure-u-2-3" placeholder="Why not?" id="why">
+								</div>
+								<div class="pure-u-1">
+									<textarea class="pure-input-1" rows="5" id="actions" placeholder="Actions taken to resolve issue"></textarea>
+								</div>
+							</div>
+						</fieldset>
+						<fieldset>
+							<legend>Resolution</legend>
+							<textarea class="pure-input-1" id="resolution" placeholder="Resolution"></textarea>
+						</fieldset>
+						<div class="submit">
+							<input type="button" class="pure-button pure-button-primary" id="submit" value="Submit"></input>
+						</div>
+						<br>
+					</form>
+					<div id="output">
+						<textarea class="pure-u-1" placeholder="Ticket Text" rows="25" ></textarea>
+						<p></p>
+						<input type="button" class="pure-button pure-button-primary" id="edit" value="Edit"></input>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/ui.js"></script>
+	</body>
